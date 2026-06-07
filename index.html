@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockControl - Home Responsiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div style="font-weight: bold; margin-bottom: 5px;">STOCKCONTROL</div>
+        <input type="checkbox" id="menu-check">
+        <label for="menu-check" class="btn-abrir">☰ MENU</label>
+        <label for="menu-check" class="btn-fechar">✖ FECHAR</label>
+        <nav class="menu-nav">
+            <ul style="list-style: none; padding: 10px; margin: 10px 0; background: white; border: 1px solid #ccc;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="detalhes.html">Detalhes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="bloco-titulo">
+            <h1>Softwares de Controle de Estoque</h1>
+            <p>Gerencie produtos, vendas e estoque com eficiência</p>
+        </div>
+
+        <!-- Coleção organizada pelo CSS: 2 colunas no PC, 1 coluna empilhada no Celular -->
+        <div class="container-colunas">
+            <div class="faixa-cinza">
+                <h3>StockPro</h3>
+                <p>Descrição: Sistema simples para controle de estoque.</p>
+            </div>
+            <div class="faixa-cinza">
+                <h3>EasyEstoque</h3>
+                <p>Descrição: Controle completo de produtos e vendas.</p>
+                <a href="detalhes.html" style="background: #eee; padding: 5px; border: 1px solid #999; text-decoration: none; color: black; font-size: 12px;">Ver detalhes</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>Desenvolvido por Felicia&1956</footer>
+</body>
+</html>

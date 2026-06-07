@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockControl - Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div style="font-weight: bold; margin-bottom: 5px;">STOCKCONTROL</div>
+        <input type="checkbox" id="menu-check">
+        <label for="menu-check" class="btn-abrir">☰ MENU</label>
+        <label for="menu-check" class="btn-fechar">✖ FECHAR</label>
+        <nav class="menu-nav">
+            <ul style="list-style: none; padding: 10px; margin: 10px 0; background: white; border: 1px solid #ccc;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="detalhes.html">Detalhes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="bloco-titulo"><h2>Cadastro de Software</h2></div>
+        <div class="faixa-cinza">
+            <form style="max-width: 400px; display: flex; flex-direction: column; gap: 10px;">
+                <label>Nome do Software: <input type="text" style="width: 100%; padding: 5px;"></label>
+                <label>Descrição: <input type="text" style="width: 100%; padding: 5px;"></label>
+                <label>Empresa: <input type="text" style="width: 100%; padding: 5px;"></label>
+                <label>Preço: <input type="text" style="width: 100%; padding: 5px;"></label>
+                <button type="submit" style="padding: 10px; width: fit-content; cursor: pointer;">SALVAR CADASTRO</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>Desenvolvido por Felicia&1956</footer>
+</body>
+</html>

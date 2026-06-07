@@ -1,0 +1,150 @@
+/* ==========================================
+   1. VARIÁVEIS (Cores e Fontes)
+   ========================================== */
+:root {
+  --cor-fundo: #f4f4f4;
+  --cor-cabecalho: #eeeeee;
+  --cor-cinza-faixa: #e0e0e0;
+  --cor-borda: #cccccc;
+  --cor-texto: #333333;
+  --cor-btn-editar: #4CAF50;
+  --cor-btn-apagar: #f44336;
+  --fonte: Arial, sans-serif;
+}
+
+/* ==========================================
+   2. CONFIGURAÇÕES BASE
+   ========================================== */
+body {
+  font-family: var(--fonte);
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  overflow-x: hidden; /* Impede barra de rolagem horizontal */
+}
+
+header {
+  background-color: var(--cor-cabecalho);
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+main {
+  padding: 20px;
+}
+
+/* ==========================================
+   3. ESTRUTURA PARA CELULAR (Mobile First)
+   ========================================== */
+
+#menu-check {
+  display: none;
+}
+
+.menu-nav, .btn-fechar {
+  display: none;
+}
+
+.btn-abrir, .btn-fechar {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Mostra/Esconde ao CLICAR (Técnica StackOverflow) */
+#menu-check:checked ~ .menu-nav { display: block; }
+#menu-check:checked ~ .btn-fechar { display: inline-block; }
+#menu-check:checked ~ .btn-abrir { display: none; }
+
+/* REQUISITO: Abrir também ao PASSAR O MOUSE (Hover) */
+header:hover .menu-nav {
+  display: block;
+}
+
+/* Layout em lista única para telas pequenas */
+.container-colunas {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+}
+
+/* ==========================================
+   4. COMPONENTES VISUAIS COMPARTILHADOS
+   ========================================== */
+.bloco-titulo {
+  background: white;
+  border: 1px solid var(--cor-borda);
+  margin-bottom: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+.faixa-cinza {
+  background-color: var(--cor-cinza-faixa);
+  padding: 30px;
+  border-top: 1px solid var(--cor-borda);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+/* TABELA E BOTÕES (Página Detalhes) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid var(--cor-borda);
+  padding: 12px;
+  text-align: left;
+}
+
+.btn-acao {
+  padding: 6px 12px;
+  margin: 2px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white !important;
+  font-size: 12px;
+  display: inline-block;
+}
+.btn-editar { background-color: var(--cor-btn-editar); }
+.btn-apagar { background-color: var(--cor-btn-apagar); }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* ==========================================
+   5. RESPONSIVIDADE: TELAS GRANDES (Computador)
+   ========================================== */
+@media (min-width: 768px) {
+  /* Exibe a coleção de objetos em 2 COLUNAS */
+  .container-colunas {
+    flex-direction: row; 
+  }
+  
+  .faixa-cinza {
+    flex: 1; 
+    border: 1px solid var(--cor-borda);
+  }
+}
+
+/* ==========================================
+   6. LEIAUTE DE IMPRESSÃO
+   ========================================== */
+@media print {
+  /* O menu de navegação e botões NÃO aparecem na impressão */
+  header, #menu-check, .btn-abrir, .btn-fechar, .menu-nav {
+    display: none !important;
+  }
+  
+  body {
+    background-color: white;
+  }
+}

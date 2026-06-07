@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockControl - Detalhes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div style="font-weight: bold; margin-bottom: 5px;">STOCKCONTROL</div>
+        <input type="checkbox" id="menu-check">
+        <label for="menu-check" class="btn-abrir">☰ MENU</label>
+        <label for="menu-check" class="btn-fechar">✖ FECHAR</label>
+        <nav class="menu-nav">
+            <ul style="list-style: none; padding: 10px; margin: 10px 0; background: white; border: 1px solid #ccc;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="detalhes.html">Detalhes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="bloco-titulo" style="text-align: right;"><h1>Detalhes do Software</h1></div>
+        <div class="faixa-cinza">
+            <p><strong>Nome:</strong> StockPro</p>
+            <p><strong>Descrição:</strong> Sistema para controle de estoque que permite cadastrar produtos, controlar entradas e saídas e gerar relatórios.</p>
+            <p><strong>Funcionalidades:</strong></p>
+            <ul>
+                <li>Cadastro de produtos</li>
+                <li>Controle de entradas e saídas</li>
+                <li>Relatórios de estoque</li>
+                <li>Controle de fornecedores</li>
+            </ul>
+        </div>
+        <table>
+            <thead><tr style="background: #eee;"><th>NOME</th><th>Empresa</th><th>Preço</th><th>Ações</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>StockPro</td><td>TechSoft</td><td>R$ 99,00</td>
+                    <td>
+                        <a href="cadastro.html" class="btn-acao btn-editar">Editar</a>
+                        <a href="#" class="btn-acao btn-apagar">Apagar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>Desenvolvido por Felicia&1956</footer>
+</body>
+</html>
